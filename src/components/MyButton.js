@@ -7,10 +7,17 @@ const MyButton = () => {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ message: 'hello world' })
+      body: JSON.stringify({ message: '1' })
     })
-    const data = await response.json()
-    console.log(data)
+    if (response.ok) {
+      // Notify the user that the data has been sent successfully
+      alert('Data received successfully. You can now close the window.')
+      // Close the window
+      window.close()
+    } else {
+      // Handle error
+      alert('Error sending data.')
+    }
   }
 
   return (
