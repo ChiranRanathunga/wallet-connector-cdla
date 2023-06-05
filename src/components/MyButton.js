@@ -21,7 +21,7 @@ const MyButton = () => {
   }
 
   return (
-    <button onClick={sendData}>Send Data</button>
+    <button onClick={sendData}>Validate</button>
   )
 }
 
